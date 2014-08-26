@@ -1,0 +1,8 @@
+site:
+  title: Tenzer.dk
+folders:
+  include: assets
+plugins:
+  - name: beetle_markdown
+  - name: beetle_sass
+  - name: beetle_watcher

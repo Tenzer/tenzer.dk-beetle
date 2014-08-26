@@ -1,0 +1,50 @@
+url: style.css
+type: none
+---
+$max-page-width: 700px;
+$dark-color: #2C3E50;
+$light-color: #ECF0F1;
+$detail-color: #E74C3C;
+
+body {
+    background-color: $light-color;
+    color: $dark-color;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+a {
+    color: $detail-color;
+    text-decoration: none;
+}
+
+header {
+    background: $dark-color;
+    color: $light-color;
+    text-align: left;
+
+    .header-container {
+        margin: auto;
+        max-width: $max-page-width;
+        padding: 20px 0;
+        width: 85%;
+
+        img {
+            height: 60px;
+        }
+    }
+}
+
+.container {
+    background-image: linear-gradient(to bottom, darken($light-color, 20) 0, $light-color 20px);
+    min-height: 800px;
+    padding-top: 20px;
+
+    .content {
+        margin: auto;
+        max-width: $max-page-width;
+        width: 85%;
+    }
+}

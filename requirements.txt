@@ -1,0 +1,4 @@
+-e git+git://github.com/cknv/beetle.git#egg=beetle
+-e git+git://github.com/cknv/beetle-markdown.git#egg=beetle-markdown
+-e git+git://github.com/Tenzer/beetle-sass.git#egg=beetle-sass
+-e git+git://github.com/Tenzer/beetle-watcher.git#egg=beetle-watcher
