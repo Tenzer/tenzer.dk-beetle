@@ -24,16 +24,16 @@ header {
     background: $dark-color;
     color: $light-color;
     text-align: left;
+}
 
-    .header-container {
-        margin: auto;
-        max-width: $max-page-width;
-        padding: 20px 0;
-        width: 85%;
+.header-container {
+    margin: auto;
+    max-width: $max-page-width;
+    padding: 20px 0;
+    width: 85%;
 
-        img {
-            height: 60px;
-        }
+    img {
+        height: 60px;
     }
 }
 
@@ -41,10 +41,10 @@ header {
     background-image: linear-gradient(to bottom, darken($light-color, 20) 0, $light-color 20px);
     min-height: 800px;
     padding-top: 20px;
+}
 
-    .content {
-        margin: auto;
-        max-width: $max-page-width;
-        width: 85%;
-    }
+.content {
+    margin: auto;
+    max-width: $max-page-width;
+    width: 85%;
 }
