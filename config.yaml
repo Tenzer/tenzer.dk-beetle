@@ -2,6 +2,8 @@ site:
   title: Tenzer.dk
 folders:
   include: assets
+page_defaults:
+  url_pattern: '/{slug}/'
 plugins:
   - name: beetle_markdown
   - name: beetle_sass
