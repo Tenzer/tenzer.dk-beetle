@@ -1,4 +1,14 @@
 {% extends 'layout.html' %}
 {% block content %}
-    {{ page.content }}
+    {% for subpage in page.subpages %}
+        <a href='{{ subpage.url }}'><h1>{{ subpage.title }}</h1></a>
+        <p class='posted-date'>Posted on {{ subpage.date.strftime('%B %d, %Y') }}</p>
+        {{ subpage.content|truncate(500) }}
+
+        {% if subpage.content|length > 500 %}
+            <p><a href='{{ subpage.url }}'>Continue reading &rarr;</a></p>
+        {% endif %}
+
+        {% if not loop.last %}<hr>{% endif %}
+    {% endfor %}
 {% endblock %}

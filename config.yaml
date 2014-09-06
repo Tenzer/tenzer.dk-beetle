@@ -1,9 +1,20 @@
 site:
   title: Tenzer.dk
+
 folders:
   include: assets
+
 page_defaults:
+  type: none
   url_pattern: '/{slug}/'
+
+site:
+  title: Tenzer.dk
+  grouping:
+    - field: grouping
+      key: date
+      order: desc
+
 plugins:
   - name: beetle_markdown
   - name: beetle_sass
