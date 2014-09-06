@@ -45,7 +45,10 @@ header {
 }
 
 .container {
-    background-image: linear-gradient(to bottom, rgba($dark-color, 0.4) 0, rgba($dark-color, 0) 20px);
+    background-image: linear-gradient(rgba($dark-color, 0.4), rgba($dark-color, 0));
+    background-image: -webkit-linear-gradient(top, rgba(44,62,80,0.4), rgba(44,62,80,0));
+    background-repeat: repeat-x;
+    background-size: auto 20px;
     padding-top: 20px;
 }
 
