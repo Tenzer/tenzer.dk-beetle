@@ -19,6 +19,14 @@ a {
     text-decoration: none;
 }
 
+a h1 {
+    color: $dark-color;
+}
+
+hr {
+    color: mix($light-color, $dark-color);
+}
+
 header {
     background: $dark-color;
     color: $light-color;
@@ -28,7 +36,7 @@ header {
 .header-container {
     margin: auto;
     max-width: $max-page-width;
-    padding: 20px 0;
+    padding: 20px 10px;
 
     img {
         max-height: 60px;
@@ -44,6 +52,22 @@ header {
 .content {
     margin: auto;
     max-width: $max-page-width;
+    padding: 0 10px;
+}
+
+.posted-date {
+    color: mix($light-color, $dark-color);
+    font-size: 1rem;
+}
+
+h1 {
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+pre {
+    max-width: $max-page-width;
+    overflow: auto;
 }
 
 footer {
