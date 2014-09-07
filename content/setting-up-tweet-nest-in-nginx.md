@@ -24,5 +24,5 @@ I have replaced those with the following Nginx rules, which are specified within
 
 A few things to note:
 
-- The '?' at the end of the regular expression rules in the final two rules, means any extra parameters given in the URL will be ignored.
+- The `?` at the end of the regular expression rules in the final two rules, means any extra parameters given in the URL will be ignored.
 - With the regular expression rule I have defined for the month view, I need it to be below the rule for showing a specific day, otherwise the month rule will catch all requests to specific days as well. I could probably modify the rule to not do this, but I like how clear it looks here.

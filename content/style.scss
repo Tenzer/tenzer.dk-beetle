@@ -73,6 +73,10 @@ pre {
     overflow: auto;
 }
 
+ul li {
+    list-style-type: circle;
+}
+
 footer {
     margin: auto;
     max-width: $max-page-width;
