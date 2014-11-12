@@ -18,4 +18,5 @@ site:
 plugins:
   - name: beetle_markdown
   - name: beetle_sass
-  - name: beetle_watcher
+  - name: beetle_preview
+    port: 8000
