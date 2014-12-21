@@ -59,11 +59,12 @@ header {
 .posted-date {
     color: mix($light-color, $dark-color);
     font-size: 1rem;
+    margin-top: 0;
 }
 
 h1 {
     line-height: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 pre {
