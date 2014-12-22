@@ -53,6 +53,10 @@ nav {
         flex: 1;
     }
 
+    a.active {
+        color: $light-color;
+    }
+
     img {
         height: 16px;
         vertical-align: text-top;

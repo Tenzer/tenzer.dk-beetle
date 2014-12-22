@@ -16,9 +16,13 @@
                     <img id='logo' src='/images/tenzerdk.png'>
                 </a>
                 <nav>
-                    <a href='/'><img src='/images/blog.png'><span> Blog</span></a>
-                    <a href='/projects/'><img src='/images/projects.png'><span> Projects</span></a>
-                    <a href='/about/'><img src='/images/about.png'><span> About me</span></a>
+                {% for item in ['blog', 'projects', 'about'] %}
+                    {% if page.active_menu == item %}
+                        <a href='/{% if item != 'blog' %}{{ item }}/{% endif %}' class='active'><img src='/images/{{ item }}-active.png'><span> {{ item|capitalize }}</span></a>
+                    {% else %}
+                        <a href='/{% if item != 'blog' %}{{ item }}/{% endif %}'><img src='/images/{{ item }}.png'><span> {{ item|capitalize }}</span></a>
+                    {% endif %}
+                {% endfor %}
                 </nav>
             </div>
         </header>

@@ -7,6 +7,7 @@ folders:
 page_defaults:
   type: none
   url_pattern: '/{slug}/'
+  active_menu: blog
 
 site:
   title: Tenzer.dk

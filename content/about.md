@@ -1,5 +1,6 @@
 title: About
 type: page
+active_menu: about
 ---
 Hi, I am Jeppe Toustrup, a systems administrator at heart spiced with some development on the side. I have a soft spot for Solaris-derived distributions and the features they have brought to the world, and have contributed to both [illumos](http://illumos.org/), [OpenIndiana](http://openindiana.org/) and [SmartOS](http://smartos.org/). In the Linux world I prefer [Arch Linux](https://www.archlinux.org/) for its never outdated packages and big archive of user packages in the [Arch User Repository](https://aur.archlinux.org/).
 
