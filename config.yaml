@@ -19,5 +19,8 @@ site:
 plugins:
   - name: beetle_markdown
   - name: beetle_sass
-  - name: beetle_preview
-    port: 8000
+  - name: beetle_htmlmin
+    args:
+      remove_empty_space: True
+      remove_comments: True
+      remove_optional_attribute_quotes: False
