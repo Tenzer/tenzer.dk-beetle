@@ -18,6 +18,8 @@ site:
 
 plugins:
   - name: beetle_markdown
+    extensions:
+    - markdown.extensions.admonition
   - name: beetle_sass
   - name: beetle_htmlmin
     args:

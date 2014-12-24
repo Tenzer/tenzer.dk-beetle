@@ -109,6 +109,29 @@ ul li {
     list-style-type: circle;
 }
 
+.admonition-title {
+    font-weight: bold;
+}
+
+.admonition {
+    border: 1px solid $dark-color;
+    border-radius: 3px;
+    margin: 20px 0;
+    padding: 0 5px;
+
+    p:first-child {
+        margin-top: 5px;
+    }
+
+    p:last-child {
+        margin-bottom: 5px;
+    }
+
+    &.warning, &.attention {
+        background-color: #ffd34e;
+    }
+}
+
 footer {
     font-size: 15px;
     margin: auto;
