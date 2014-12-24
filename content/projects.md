@@ -2,4 +2,10 @@ title: Projects
 type: page
 active_menu: projects
 ---
-A list of projects I've made is supposed to be here when I get around to it. For now, please take a look at my [GitHub profile](https://github.com/Tenzer).
+Here's a list of open source projects I've made that I think are noteworthy:
+
+* [neutralzone.dk](https://github.com/Tenzer/neutralzone.dk) - The code for [neutralzone.dk](http://neutralzone.dk/), a website to show tweets in realtime from Danish American football teams
+* [plugin.video.nfl-teams](https://github.com/Tenzer/plugin.video.nfl-teams) - Plugin for [Kodi](http://kodi.tv/) (former XBMC) to watch videos from the various NFL teams' websites
+* [Zenphoto-Sitemap](zenphoto-sitemap/) - Sitemap generator for [Zenphoto](http://www.zenphoto.org/)
+
+More projects can be found on my [GitHub profile](https://github.com/Tenzer).
