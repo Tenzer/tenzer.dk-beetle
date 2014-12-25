@@ -1,5 +1,5 @@
 title: Concert photography is fun!
-date: 2010-02-19
+date: 2011-08-31
 type: blog
 grouping: blog
 ---
