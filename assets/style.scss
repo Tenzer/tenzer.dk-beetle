@@ -44,12 +44,14 @@ header {
 }
 
 nav {
+    display: -webkit-flex;
     display: flex;
     font-size: 1rem;
     max-width: 400px;
 
     a {
         color: mix($light-color, $dark-color);
+        -webkit-flex: 1;
         flex: 1;
     }
 
