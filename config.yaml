@@ -1,5 +1,10 @@
 site:
   title: Tenzer.dk
+  domain: tenzer.dk
+  grouping:
+    - field: grouping
+      key: date
+      order: desc
 
 folders:
   include: assets
@@ -8,13 +13,6 @@ page_defaults:
   type: none
   url_pattern: '/{slug}/'
   active_menu: blog
-
-site:
-  title: Tenzer.dk
-  grouping:
-    - field: grouping
-      key: date
-      order: desc
 
 plugins:
   - name: beetle_markdown
