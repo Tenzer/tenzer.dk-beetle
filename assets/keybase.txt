@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/tenzer
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://tenzer.dk
+  * I am tenzer (https://keybase.io/tenzer) on keybase.
+  * I have a public key with fingerprint 5148 896B 2209 AADB BAD1  526D EC7E 4390 2C0B B7B2
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.4.11"
+        },
+        "key": {
+            "fingerprint": "5148896b2209aadbbad1526dec7e43902c0bb7b2",
+            "host": "keybase.io",
+            "key_id": "EC7E43902C0BB7B2",
+            "uid": "e71cae655f449ab5ac43207ba4bde200",
+            "username": "tenzer"
+        },
+        "merkle_root": {
+            "ctime": 1406883079,
+            "hash": "655734a5aa9c324cb0fc20a94d47605a82626dc4372594784169a99aab11c1f555b4ac17a0443bcdd3947003a2258bc7b36bdee1c9abb9dbee3686fc36e8b06b",
+            "seqno": 32242
+        },
+        "service": {
+            "hostname": "tenzer.dk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1406883195,
+    "expire_in": 157680000,
+    "prev": "d5d7f3e92be1cb63cc5f7ddef4682f1ff865efbf0d7690bab476fd1c510cdacb",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFVkn9MVWUYxy8QCAbKD0UwQDvNWQaX8/sHJS6MTaIoIgVKdnnf97wHjsC9t3Mv
+ePF603CKZiUE0SBLAds1ddzpMmK0xGnMeTNQXIhEpCbBZFIoWa6NzmG26fvXed/z
+eb7P9/u8b11EkCkwYPKdtXXJj3eeCPBPQFPe8Hq3m4A2uZpIcxOoXMVWp/FlBRWY
+SCPKcDUEDmxWbcutNhmbNzmWP2CSiSqsOVSbVadIM2umKMKTbPBGtaJaS7Bm11RD
+jOAoVhQlHtI0KQEgQwhkiqN5GSMBs4xE0oiEUIC0rllqczgfaUvMaVpUWT/NXCtk
+zvFryYwMIcPgK+d+YIFCAPMcp7CsBCAHEMvQpAABC2VMk6QBOrD2IJMTW7dgzXBb
+gbWycmzRbLa5zMipGgDFkrwoMqQg6X6Ao1Qv0aUFhgUcABJiaBZBUkE0CSRWZgWe
+5IBI83oevatAcxIriCzFS0DSw0KKQpTCcRxkAaIEQLIsA5EsMzpFkgygaU6ESIAM
+rzvFFNLdQ0mGGDO8yCuI4bEISR7qARz4bauNSGNomqU9xlarUhE2bBszeySaWS7T
+C+yazWlDtnL9uNTptKcZgZ3VdgPbjKFlTuAwwhaoWmX9uh6+UEpHHx0GJXHJBHbZ
+VQ1bVIPgBF4k9WX0wVW6pszJgsJgiYZ6DMgzCHGKIMtYYXmRVihFEXkOK1AhZYGX
+SAigPjlFphBHkUgG6OGIuk9Qoks61BIrcFZqmPDsCUx4zBQQaAoJDjRerGl+WOT/
+zzgmceGstvty2eCW36ecfvvx0eHDK29cvd+QLryXSk0MLD75z/rQjrGwgu1HrEG7
+tHMRaWjnvlJfaHOXe+OIUvRbza6Kedr4+PiNC7VJ9e+LU13p+W1hmT7Pdy3dcNFw
+1J0LI+t8f4yPut/M3at4U37uPG2dNO9szpndd9ZHfZ+6zvdMvv9uS6X7m4Sjub13
+f23pTzrYHOr57JXiprTC+SlZrmfvTLQn1t5jL/rj2hoLO68sWBS6wvvWpWxnQmVz
+wrmtl7JmFkvXwqtW3Xp6A9zRGLJpcu+KoCVjQltP0TFX9tK/w2/l5FQUfBV189bM
+B2Nl37par79m4wIjPmr2f/FL6eX4l7NWFx0qiV2/f01LzdTd/PsvFpzvMa/Uus60
+uw54njzx3Mm+wqujdV/XmLr7G95dOr2MCL+e8ULx8xM/SHtnmyzR5xojr21GcZaj
+g4cPzfPdbKu4MJLz4xMLR25n9VflgTj/6T3BX4ZW97k+Cfmwd1tH7IbP/5wJY2+k
+fozS25mtA67a8/b+e9ujk7YGxaurzz41m9055I3Y6E1FEy/5uAPAFPNT+PEdCZlR
+3iPxd/oKavwbOo582nQQxm4bGCuerkqJ6Xt1fzaT3XusdfjUmt3M7XJ/onfwjTi1
+O/6vBYO50XVi69C/edOEtehiVmxe7qkaoT50YEibXtUQcCYmuDLj9en6SPdMzxW5
+J27Jfw==
+=O5Rk
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tenzer
+
+==================================================================
