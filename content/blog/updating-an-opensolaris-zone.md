@@ -1,5 +1,5 @@
 title: Updating an OpenSolaris zone
-date: 2009-10-05
+date: 2009-10-04
 type: blog
 grouping: blog
 ---
