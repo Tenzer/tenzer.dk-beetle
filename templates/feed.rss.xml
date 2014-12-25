@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ site.title }}</title>
+        <link>http://{{ site.domain }}/</link>
+        <description>RSS feed for the blog at Tenzer.dk</description>
+        <language>en</language>
+        <copyright>Copyright {{ beetle.now.strftime('%Y') }}, Jeppe Toustrup unless otherwise noted.</copyright>
+        <generator>Beetle</generator>
+        <image>
+            <url>http://{{ site.domain }}/images/favicon.png</url>
+            <title>{{ site.title }}</title>
+            <link>http://{{ site.domain }}/</link>
+            <width>128</width>
+            <height>128</height>
+        </image>
+        <atom:link href="http://{{ site.domain }}/feed.rss" rel="self" type="application/rss+xml" />
+
+        {%- for subpage in page.subpages %}
+        <item>
+            <title>{{ subpage.title }}</title>
+            <link>http://{{ site.domain + subpage.url }}</link>
+            <guid>http://{{ site.domain + subpage.url }}</guid>
+            <description><![CDATA[{{ subpage.content|truncate(200) }}]]></description>
+            <pubDate>{{ subpage.date.strftime('%a, %d %b %Y %H:%M:%S Z') }}</pubDate>
+        </item>
+        {%- endfor %}
+    </channel>
+</rss>

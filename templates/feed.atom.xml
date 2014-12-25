@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://{{ site.domain }}/</id>
+    <title>{{ site.title }}</title>
+    <link href="http://{{ site.domain }}/{{ page.url }}" rel="self" />
+    <link href="http://{{ site.domain }}/" />
+    <updated>{{ beetle.now.strftime('%Y-%m-%dT%H:%M:%S') }}Z</updated>
+    {%- for subpage in page.subpages %}
+    <entry>
+        <id>http://{{ site.domain + subpage.url }}</id>
+        <title>{{ subpage.title }}</title>
+        <link href="http://{{ site.domain + subpage.url }}" />
+        <updated>{{ subpage.date.strftime('%Y-%m-%dT%H:%M:%SZ') }}</updated>
+        <author>
+            <name>Jeppe Toustrup</name>
+        </author>
+        <summary><![CDATA[{{ subpage.content|truncate(200) }}]]></summary>
+    </entry>
+    {%- endfor %}
+</feed>
