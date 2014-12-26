@@ -19,6 +19,7 @@ plugins:
     extensions:
     - markdown.extensions.admonition
   - name: beetle_sass
+    output_style: compressed
   - name: beetle_htmlmin
     args:
       remove_empty_space: True
