@@ -16,14 +16,14 @@
         <header>
             <div class='header-container'>
                 <a href='/'>
-                    <img id='logo' src='/images/tenzerdk.png'>
+                    <img id='logo' src='/images/tenzerdk.png' alt='Tenzer.dk logo'>
                 </a>
                 <nav>
                 {% for item in ['blog', 'projects', 'about'] %}
                     {% if page.active_menu == item %}
-                        <a href='/{% if item != 'blog' %}{{ item }}/{% endif %}' class='active'><img src='/images/{{ item }}-active.png'><span> {{ item|capitalize }}</span></a>
+                        <a href='/{% if item != 'blog' %}{{ item }}/{% endif %}' class='active'><img src='/images/{{ item }}-active.png' alt='{{ item|capitalize }} menu icon'><span> {{ item|capitalize }}</span></a>
                     {% else %}
-                        <a href='/{% if item != 'blog' %}{{ item }}/{% endif %}'><img src='/images/{{ item }}.png'><span> {{ item|capitalize }}</span></a>
+                        <a href='/{% if item != 'blog' %}{{ item }}/{% endif %}'><img src='/images/{{ item }}.png' alt='{{ item|capitalize }} menu icon'><span> {{ item|capitalize }}</span></a>
                     {% endif %}
                 {% endfor %}
                 </nav>
