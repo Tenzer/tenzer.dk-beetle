@@ -25,3 +25,5 @@ plugins:
       remove_empty_space: True
       remove_comments: True
       remove_optional_attribute_quotes: False
+  - name: beetle_sitemap
+    site: http://tenzer.dk
