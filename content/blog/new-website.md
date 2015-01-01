@@ -11,7 +11,7 @@ For a while I had an urge to do something about my website which was more or les
 
 For inspiration of how the site could look and what content I should include, I looked at some of my friends' websites ([cknv.dk](http://cknv.dk/), [mntr.dk](https://mntr.dk/), [kenneth.io](https://kenneth.io/)) and found a [color scheme](https://color.adobe.com/Flat-UI-color-theme-2469224/) and a simple [Wordpress theme](http://fastr-demo.themes.kanishkkunal.in/) that I liked which I could base my own site upon.
 
-I worked on the site on and off over the following months, finding bugs and limitations in Beetle that was solved along with Esben, and I also made a few plugins for Beetle that I needed (a [SASS compiler](https://github.com/Tenzer/beetle-sass) and [HTML minifier](https://github.com/Tenzer/beetle-htmlmin)).
+I worked on the site on and off over the following months, finding bugs and limitations in Beetle that was solved along with Esben, and I also made a few plugins for Beetle that I needed (a [SASS compiler](https://github.com/Tenzer/beetle-sass), [HTML minifier](https://github.com/Tenzer/beetle-htmlmin) and a [sitemap.xml generator](https://github.com/Tenzer/beetle-sitemap)).
 
 Then on christmas eve, moments before the family dinner was about to start, I switched my website to point to this new wonder and announced it on [Twitter](https://twitter.com/Tenzer/status/547800770742337536). It didn't cause as much of a uproar as I expected, probably due to my timing, but I'm at least satisfied with what I have produced.
 
