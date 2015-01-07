@@ -140,3 +140,9 @@ footer {
     max-width: $max-page-width;
     text-align: center;
 }
+
+@media print {
+    header, footer {
+        display: none;
+    }
+}
