@@ -3,23 +3,23 @@ date: 2015-01-14
 type: blog
 grouping: blog
 ---
-I've got to play around with [Docker](https://www.docker.com/) lately at work, and for that we needed a private place to store Docker images. Since the other guides I found either were unnecessary advanced, or hosted the registry inside a Docker instance, instead of making use of our existing server setup, I've gone ahead and made a guide for how I set it up.
+I got to play around with [Docker](https://www.docker.com/) lately at work, and for that we needed a private place to store Docker images. Since the other guides I found either were unnecessarily advanced, or hosted the registry inside a Docker instance, instead of making use of our existing server setup, I've gone ahead and made a guide for how I set it up.
 
-This guide show the steps to take on an Ubuntu machine, but it should be easy to apply to other operating systems.
+This guide shows the steps to take on an Ubuntu machine, but it should be easy to apply to other operating systems.
 
 
 Installation
 ---------------
 
-We are going to use the official [Docker Registry](https://github.com/docker/docker-registry) Python project for this, but first, let's create a user to run the registry as:
+We are going to use the official [Docker Registry](https://github.com/docker/docker-registry) Python project for this, but first, lets create a user to run the registry as:
 
     sudo useradd --system --create-home docker
 
-We are going to install Docker Registry in a Python virtual environment, so let's install some packages for that:
+We are going to install Docker Registry in a Python virtual environment, so lets install some packages for that:
 
     sudo apt-get install python-virtualenv libpython-dev liblzma-dev swig libssl-dev
 
-Then let us switch to the `docker` use to get it installed:
+Then lets switch to the `docker` user to get it installed:
 
     sudo su - docker
     virtualenv /home/docker/venv
@@ -29,7 +29,7 @@ Then let us switch to the `docker` use to get it installed:
 Configuration
 -------------
 
-Next up we need to prepare a configuration file for Docker Registry. There's a sample configuration file included in the installed Python package, so let's use that as a base:
+Next up we need to prepare a configuration file for Docker Registry. There's a sample configuration file included in the installed Python package, so lets use that as a base:
 
     cp /home/docker/venv/lib/python2.7/site-packages/config/config_sample.yml /home/docker/sample.yml
 
@@ -43,7 +43,7 @@ When that's done and you have created any folders, AWS S3 buckets or whatever yo
 Upstart
 -------
 
-Upstart is probably the easiest way to set up a new service on Ubuntu so let's use that. Copy the following Upstart configuration to `/etc/init/docker-registry.conf`:
+Upstart is probably the easiest way to set up a new service on Ubuntu so lets use that. Copy the following Upstart configuration to `/etc/init/docker-registry.conf`:
 
     description "Docker Registry"
 
@@ -103,7 +103,7 @@ Then replace the contents of `/etc/nginx/sites-available/default` with something
     }
 
 !!! Attention
-    Docker expect the registry to use HTTPS, but I won't go into how that is set up in Nginx as there are plenty of guides available on how to configure HTTPS already.
+    Docker expects the registry to use HTTPS, but I won't go into how that is setup in Nginx as there are plenty of guides available on how to configure HTTPS already.
 
 Reload the Nginx configuration, and then create a user in the auth file with `htpasswd`:
 
