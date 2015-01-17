@@ -90,16 +90,14 @@ Then replace the contents of `/etc/nginx/sites-available/default` with something
         client_max_body_size 500M;
         proxy_set_header Host $host;
 
-        location / {
-            auth_basic "Docker Registry";
-            auth_basic_user_file /home/docker/auth;
+        auth_basic "Docker Registry";
+        auth_basic_user_file /home/docker/auth;
 
-            proxy_pass http://docker;
-        }
+        location / { proxy_pass http://docker; }
 
         # Endpoints which are not requested with authentication
-        location /v1/_ping { proxy_pass http://docker; }
-        location /v1/search { proxy_pass http://docker; }
+        location /v1/_ping { proxy_pass http://docker; auth_basic off; }
+        location /v1/search { proxy_pass http://docker; auth_basic off; }
     }
 
 !!! Attention
