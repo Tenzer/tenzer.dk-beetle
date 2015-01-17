@@ -111,3 +111,6 @@ Reload the Nginx configuration, and then create a user in the auth file with `ht
 You will be asked what password you would like the user to have, and then you should be all set. On your client machine you will first have to log into the registry with your newly created user with `docker login <server URL>` (it asks you for an e-mail address but it is not used for anything), and then you can search, push and pull from the Docker registry.
 
 I hope you found this guide useful, and in case you have any comments to this guide or just want to get in touch with me, then find my on Twitter as [@Tenzer](https://twitter.com/Tenzer).
+
+**Update!**  
+I've made [another guide](/guide-docker-registry-frontend/) on how to set up a frontend for your own registry, making it easier to navigate and manage.
