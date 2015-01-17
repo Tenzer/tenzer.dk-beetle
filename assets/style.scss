@@ -105,6 +105,18 @@ pre {
     max-width: $max-page-width;
     overflow: auto;
     padding: 5px 10px;
+
+    code {
+        background-color: inherit;
+        border: none;
+        padding: 0;
+    }
+}
+
+code {
+    background-color: lighten($light-color, 3%);
+    border: 1px dashed darken($light-color, 10%);
+    padding: 5px;
 }
 
 ul li {
