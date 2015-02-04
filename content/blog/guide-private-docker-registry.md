@@ -9,7 +9,7 @@ This guide shows the steps to take on an Ubuntu machine, but it should be easy t
 
 
 Installation
----------------
+------------
 
 We are going to use the official [Docker Registry](https://github.com/docker/docker-registry) Python project for this, but first, lets create a user to run the registry as:
 
