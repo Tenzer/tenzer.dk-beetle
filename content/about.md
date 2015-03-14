@@ -12,3 +12,9 @@ Examples of projects I enjoy working with:
 * [Redis](http://redis.io/)
 * [Ansible](http://www.ansible.com/)
 * [Socket.IO](http://socket.io/)
+
+
+Contact
+-------
+
+I go by the nick Tenzer most places, hence the name of this site, and you can find me under that name on both [Twitter](https://twitter.com/Tenzer) and [GitHub](https://github.com/Tenzer).
