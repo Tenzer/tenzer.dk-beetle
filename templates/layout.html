@@ -24,6 +24,9 @@
         {% if page.type == 'blog' %}
             <meta property='og:description' content='{{ page.content|striptags|truncate(250) }}'>
             <meta name='twitter:description' content='{{ page.content|striptags|truncate(250) }}'>
+        {% else %}
+            <meta property='og:description' content='The personal website and blog for Jeppe Toustrup about open source technologies and photography.'>
+            <meta name='twitter:description' content='The personal website and blog for Jeppe Toustrup about open source technologies and photography.'>
         {% endif %}
     </head>
     <body>
