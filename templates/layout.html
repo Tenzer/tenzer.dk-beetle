@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang='en'>
-    <head>
+    <head prefix='og: http://ogp.me/ns#'>
         <meta charset='UTF-8'>
         <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
         <meta name='description' content='The personal website and blog for Jeppe Toustrup about open source technologies and photography.'>
@@ -12,6 +12,19 @@
         <link rel='icon' href='/favicon.ico' sizes='16x16 32x32 48x48 64x64' type='image/x-icon'>
         <link rel='alternate' href='/feed.atom' type='application/atom+xml' title='Tenzer.dk Atom Feed'>
         <link rel='alternate' href='/feed.rss' type='application/rss+xml' title='Tenzer.dk RSS Feed'>
+        <meta property='og:type' content='website'>
+        <meta property='og:site_name' content='Tenzer.dk'>
+        <meta property='og:image' content='http://{{ site.domain }}/images/logo.png'>
+        <meta property='og:url' content='http://{{ site.domain }}{% if page.url.startswith('/') %}{{ page.url }}{% else %}/{% endif %}'>
+        <meta property='og:title' content='{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}'>
+        <meta name='twitter:card' content='summary'>
+        <meta name='twitter:site' content='@Tenzer'>
+        <meta name='twitter:title' content='{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}'>
+        <meta name='twitter:image' content='http://{{ site.domain }}/images/logo.png'>
+        {% if page.type == 'blog' %}
+            <meta property='og:description' content='{{ page.content|striptags|truncate(250) }}'>
+            <meta name='twitter:description' content='{{ page.content|striptags|truncate(250) }}'>
+        {% endif %}
     </head>
     <body>
         <header>
