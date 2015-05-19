@@ -21,7 +21,7 @@
             <title>{{ subpage.title }}</title>
             <link>http://{{ site.domain + subpage.url }}</link>
             <guid>http://{{ site.domain + subpage.url }}</guid>
-            <description><![CDATA[{{ subpage.content|truncate(200) }}]]></description>
+            <description><![CDATA[{{ subpage.content|striptags|truncate(200) }}]]></description>
             <pubDate>{{ subpage.date.strftime('%a, %d %b %Y %H:%M:%S Z') }}</pubDate>
         </item>
         {%- endfor %}

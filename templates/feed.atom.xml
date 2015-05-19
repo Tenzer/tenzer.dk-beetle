@@ -18,7 +18,7 @@
         <title>{{ subpage.title }}</title>
         <link href="http://{{ site.domain + subpage.url }}" />
         <updated>{{ subpage.date.strftime('%Y-%m-%dT%H:%M:%SZ') }}</updated>
-        <summary type="html"><![CDATA[{{ subpage.content|truncate(200) }}]]></summary>
+        <summary type="html"><![CDATA[{{ subpage.content|striptags|truncate(200) }}]]></summary>
     </entry>
     {%- endfor %}
 </feed>
