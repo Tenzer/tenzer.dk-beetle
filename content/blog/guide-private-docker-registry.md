@@ -31,7 +31,7 @@ Configuration
 
 Next up we need to prepare a configuration file for Docker Registry. There's a sample configuration file included in the installed Python package, so lets use that as a base:
 
-    cp /home/docker/venv/lib/python2.7/site-packages/config/config_sample.yml /home/docker/sample.yml
+    cp /home/docker/venv/lib/python2.7/site-packages/config/config_sample.yml /home/docker/config.yml
 
 If you open the configuration file, you will see there are different sections of the configuration, where most of them inherit settings from one above. Each of those sections specify a configuration "set" or "flavor", and contains various settings regarding log levels, storage options and so on.
 
