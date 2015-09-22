@@ -3,7 +3,7 @@ date: 2015-07-26
 type: blog
 grouping: blog
 ---
-I recently had made a setup at [work](https://www.falconsocial.com/) where I had a Nginx server facing the user, which would forward requests to a service running behind an [AWS Elastic Load Balancer](http://aws.amazon.com/elasticloadbalancing/) (aka. ELB). That in itself doesn't sound like a difficult task, you just find the hostname for the ELB and point Nginx at it like this, right?
+I recently made a setup at [work](https://www.falconsocial.com/) where I had a Nginx server facing the user, which would forward requests to a service running behind an [AWS Elastic Load Balancer](http://aws.amazon.com/elasticloadbalancing/) (aka. ELB). That in itself doesn't sound like a difficult task, you just find the hostname for the ELB and point Nginx at it with a [proxy_pass](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass) statement like this, right?
 
     location / {
         proxy_pass http://service-1234567890.us-east-1.elb.amazonaws.com;
