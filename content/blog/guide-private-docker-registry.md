@@ -13,14 +13,17 @@ Installation
 
 We are going to use the official [Docker Registry](https://github.com/docker/docker-registry) Python project for this, but first, lets create a user to run the registry as:
 
+    :::shell
     sudo useradd --system --create-home docker
 
 We are going to install Docker Registry in a Python virtual environment, so lets install some packages for that:
 
+    :::shell
     sudo apt-get install python-virtualenv libpython-dev liblzma-dev swig libssl-dev
 
 Then lets switch to the `docker` user to get it installed:
 
+    :::shell
     sudo su - docker
     virtualenv /home/docker/venv
     /home/docker/venv/bin/pip install docker-registry
@@ -31,6 +34,7 @@ Configuration
 
 Next up we need to prepare a configuration file for Docker Registry. There's a sample configuration file included in the installed Python package, so lets use that as a base:
 
+    :::shell
     cp /home/docker/venv/lib/python2.7/site-packages/config/config_sample.yml /home/docker/config.yml
 
 If you open the configuration file, you will see there are different sections of the configuration, where most of them inherit settings from one above. Each of those sections specify a configuration "set" or "flavor", and contains various settings regarding log levels, storage options and so on.
@@ -62,6 +66,7 @@ Upstart is probably the easiest way to set up a new service on Ubuntu so lets us
 
 You should change the `SETTINGS_FLAVOR` variable to the name of the flavor you created in the configuration file, and add any other environment variables you may need. Then you just need to start the service with:
 
+    :::shell
     sudo start docker-registry
 
 Check the log file at `/var/log/upstart/docker-registry.log` and make sure it doesn't spit out a bunch of Python stack traces. If you have `curl` installed on the machine, you can also do a quick test by running `curl http://127.0.0.1:5000/` in order to make sure it responds with `"docker-registry server"`.
@@ -74,10 +79,12 @@ Docker Registry does not provide any means of authentication or encryption for c
 
 Install the Nginx version you prefer, here I go with `nginx-light` since it contains all we need. We also install `apache2-utils` since it contains the `htpasswd` utility we are going to use shortly:
 
+    :::shell
     sudo apt-get install nginx-light apache2-utils
 
 Then replace the contents of `/etc/nginx/sites-available/default` with something like the following:
 
+    :::nginx
     upstream docker { server 127.0.0.1:5000; }
 
     server {
@@ -105,6 +112,7 @@ Then replace the contents of `/etc/nginx/sites-available/default` with something
 
 Reload the Nginx configuration, and then create a user in the auth file with `htpasswd`:
 
+    :::shell
     sudo service nginx reload
     sudo htpasswd /home/docker/auth <username>
 

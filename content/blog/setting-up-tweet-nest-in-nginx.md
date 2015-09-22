@@ -7,6 +7,7 @@ Today I've set up [Tweet Nest](http://pongsocket.com/tweetnest/) at [tweets.tenz
 
 The mod_rewrite rules are limited to rules for handling requests to `/sort`, `/favorites`, `/search` and pages to show tweets for a specific month and day. In the .htaccess file they are specified as:
 
+    :::apache
     RewriteEngine On
     RewriteRule ^sort/?$ ./sort.php [L]
     RewriteRule ^favorites/?$ ./favorites.php [L]
@@ -16,6 +17,7 @@ The mod_rewrite rules are limited to rules for handling requests to `/sort`, `/f
 
 I have replaced those with the following Nginx rules, which are specified within the `server {}` directive for the site:
 
+    :::nginx
     rewrite ^/sort /sort.php;
     rewrite ^/favorites /favorites.php;
     rewrite ^/search /search.php;

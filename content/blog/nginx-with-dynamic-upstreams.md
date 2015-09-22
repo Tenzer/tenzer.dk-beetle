@@ -5,6 +5,7 @@ grouping: blog
 ---
 I recently made a setup at [work](https://www.falconsocial.com/) where I had a Nginx server facing the user, which would forward requests to a service running behind an [AWS Elastic Load Balancer](http://aws.amazon.com/elasticloadbalancing/) (aka. ELB). That in itself doesn't sound like a difficult task, you just find the hostname for the ELB and point Nginx at it with a [proxy_pass](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass) statement like this, right?
 
+    :::nginx
     location / {
         proxy_pass http://service-1234567890.us-east-1.elb.amazonaws.com;
     }
@@ -41,6 +42,7 @@ The free alternative
 
 A much cheaper option is to write the configuration like this:
 
+    :::nginx
     resolver 172.16.0.23;
     set $upstream_endpoint http://service-1234567890.us-east-1.elb.amazonaws.com;
     location / {
@@ -53,10 +55,12 @@ The answer is in part found by the end of the documentation for the [`proxy_pass
 
 > A server name, its port and the passed URI can also be specified using variables:
 >
+>     :::nginx
 >     proxy_pass http://$host$uri;
 >
 > or even like this:
 >
+>     :::nginx
 >     proxy_pass $request;
 >
 > In this case, the server name is searched among the described [server groups](http://nginx.org/en/docs/http/ngx_http_upstream_module.html), and, if not found, is determined using a [resolver](http://nginx.org/en/docs/http/ngx_http_core_module.html#resolver).
@@ -75,12 +79,14 @@ First things first, a quick recap of how `proxy_pass` works during normal operat
 
 Imagine we have an Nginx configuration containing this:
 
+    :::nginx
     location /foo/ {
         proxy_pass http://127.0.0.1:8080;
     }
 
 When you make a request to the site for `/foo/bar/baz` then Nginx will forward the request to `http://127.0.0.1:8080/foo/bar/baz`. If the configuration instead looked like this:
 
+    :::nginx
     location /foo/ {
         # Note the trailing slash       ↓
         proxy_pass http://127.0.0.1:8080/;
@@ -93,6 +99,7 @@ Then Nginx will strip the part of the URI specified in the `location` directive 
 
 When we use a variable as the parameter for `proxy_pass` the behaviour show above with the trailing slash changes. Say we have this configuration:
 
+    :::nginx
     resolver 172.16.0.23;
     set $upstream_endpoint http://service-1234567890.us-east-1.elb.amazonaws.com/;
     location /foo/ {
@@ -103,6 +110,7 @@ When you make a request for `/foo/bar/baz` for that configuration, then the forw
 
 The workaround for this is to remove the trailing slash from the upstream endpoint, and then rewrite it manually like this:
 
+    :::nginx
     resolver 172.16.0.23;
     set $upstream_endpoint http://service-1234567890.us-east-1.elb.amazonaws.com;
     location /foo/ {

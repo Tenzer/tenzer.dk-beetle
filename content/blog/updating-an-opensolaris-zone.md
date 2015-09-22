@@ -7,12 +7,15 @@ This is just a quick guide for people who need to update an OpenSolaris zone. Fi
 
 After the zone is stopped, you will have to set the zone state to "ready", in order for the file systems to be mounted:
 
+    :::shell
     zoneadm -z <zonename> ready
 
 Then you can start the update procedure:
 
+    :::shell
     pkg -R <path to zone>/root image-update
 
 And lastly, when the zone is upgraded you can boot up the zone again:
 
+    :::shell
     zoneadm -z <zonename> boot

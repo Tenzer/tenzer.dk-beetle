@@ -18,6 +18,7 @@ plugins:
   - name: beetle_markdown
     extensions:
     - markdown.extensions.admonition
+    - markdown.extensions.codehilite
   - name: beetle_sass
     output_style: compressed
   - name: beetle_htmlmin

@@ -3,3 +3,4 @@ Beetle-Htmlmin
 Beetle-Markdown
 Beetle-Sass
 Beetle-Sitemap
+Pygments

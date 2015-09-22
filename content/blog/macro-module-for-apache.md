@@ -11,10 +11,12 @@ Installation
 ------------
 First we need to get the module installed, since it is not installed in a default [Debian](https://www.debian.org/)/[Ubuntu](http://www.ubuntu.com/) installation. I presume you already have Apache2 installed, otherwise you should install that first. We can use <acronym title="Advanced Package Tool">APT</acronym> to install the module, just run the following command as root:
 
+    :::shell
     apt-get install libapache2-mod-macro
 
 Next we need to activate the module and restart Apache:
 
+    :::shell
     a2enmod macro
     /etc/init.d/apache2 restart
 
@@ -24,6 +26,7 @@ Basic usage
 -----------
 Before we are ready to make our config files, you should first learn how to use mod_macro. It basically adds one new function and a new tag, which now can be used in Apache's config files. The function `Use` and the tag `<Macro>`. We start of with the tag which is used to create a new macro. A simple static macro could look like the following:
 
+    :::apache
     <Macro Logfile>
         CustomLog /var/log/apache2/access.log combined
         ErrorLog /var/log/apache2/error.log
@@ -32,12 +35,14 @@ Before we are ready to make our config files, you should first learn how to use 
 
 The macro simply declares that the macro called `Logfile` contains the text within the `Macro` tags. In order to use the macro you just put the following line in your config file, where ever you normally would have put the lines from your macro:
 
+    :::apache
     Use Logfile
 
 When you then reload Apache and it looks through the configuration files, then it automatically converts `Use Logfile` to the lines you have defined in your macro.
 
 That was simple, but what do you do if you don't want all sites to log to the same file? You could create a logfile for each site, by declaring a variable which is then used in the macro:
 
+    :::apache
     <Macro Logfiles $sitename>
         CustomLog /var/log/apache2/$sitename-access.log combined
         ErrorLog /var/log/apache2/$sitename-error.log
@@ -46,10 +51,12 @@ That was simple, but what do you do if you don't want all sites to log to the sa
 
 And the `Use` function to go with it:
 
+    :::apache
     Use Logfiles tenzer.dk
 
 Neat, don't you think? If you then want to change the path to your logfiles, you only have to change it in your macro, and not in every config file you have got. The syntax for `Use` looks like this:
 
+    :::apache
     Use <Macroname> [Variable 1] [Variable 2] ... [Variable x]
 
 Which basically means that you have to supply a name for the macro you are using, but the variables are optional.
@@ -60,6 +67,7 @@ Advanced usage
 --------------
 Macros are not limited to only be used for printing a few lines in Apache's configuration, it can also be used for entire `VirtualHost` declarations, like this:
 
+    :::apache
     <Macro VHost $type $hostname>
         <VirtualHost *>
             ServerAdmin webmaster@$hostname
@@ -91,9 +99,10 @@ The purpose of the `$type` variable is to give you the choice between making a c
 
 This makes it very easy to get an overview of which sites you have added in Apache, since the list of virtual hosts would look like this:
 
+    :::apache
     Use VHost dir tenzer.dk
     Use VHost cfg example.com
-    etc...
+    # etc...
 
 This also makes it easier to script adding and deleting sites to the server, since you only have to look for one single line in the Apache configuration.
 

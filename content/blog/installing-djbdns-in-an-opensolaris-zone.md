@@ -7,6 +7,7 @@ This guide shows you how to install [djbdns](http://cr.yp.to/djbdns.html) in an 
 
 First we start of with the installation of some packages, including `sunstudio` since we are going to use that to compile djbdns with:
 
+    :::shell
     pkg install sunstudio SUNWbtool
 
 That is probably going to take a while, since ~400 MB has to be downloaded.
@@ -18,12 +19,14 @@ You will first have to install [daemontools](http://cr.yp.to/daemontools.html) b
 
 Start by downloading the source code for daemontools, and extract it afterwards:
 
+    :::shell
     curl -O http://cr.yp.to/daemontools/daemontools-0.76.tar.gz
     gunzip daemontools-0.76.tar.gz
     tar xf daemontools-0.76.tar
 
 Enter the newly extracted directory, and make a few modifications in order to use the Sun Studio compiler instead of GCC before trying to compile:
 
+    :::shell
     cd admin/daemontools-0.76
     echo "cc -O2" > src/conf-cc
     echo "cc -s" > src/conf-ld
@@ -31,6 +34,7 @@ Enter the newly extracted directory, and make a few modifications in order to us
 
 Now there has been added a line to `/etc/inittab` which is supposed to keep the `svscan` service running at all times. However, that line does not work properly on Solaris machines, which causes `svscan` to restart every ten minutes. So you will have to edit the last line in `/etc/inittab` concerning `svscanboot`, and replace the line with the following:
 
+    :::text
     SV:123456:respawn:/command/svscanboot > /dev/msglog 2>&1 < /dev/null
 
 After that is done you have to reload `init`, in order for it to pick up the new line. This is simply done by executing `init q`. And daemontools is now installed and running.
@@ -48,12 +52,14 @@ Next up is [ucspi-tcp](http://cr.yp.to/ucspi-tcp.html) which enables services to
 
 Again, download and extract:
 
+    :::shell
     curl -O http://cr.yp.to/ucspi-tcp/ucspi-tcp-0.88.tar.gz
     gunzip ucspi-tcp-0.88.tar.gz
     tar xf ucspi-tcp-0.88.tar
 
 We are basically doing the same modifications to ucspi-tcp as we did to daemontools:
 
+    :::shell
     cd ucspi-tcp-0.88
     echo "cc -O2" > conf-cc
     echo "cc -s" > conf-ld
@@ -69,12 +75,14 @@ Finally we are going to install the [djbdns](http://cr.yp.to/djbdns.html) packag
 
 Start of with the downloading and extracting:
 
+    :::shell
     curl -O http://cr.yp.to/djbdns/djbdns-1.05.tar.gz
     gunzip djbdns-1.05.tar.gz
     tar xf djbdns-1.05.tar
 
 And once again, we will have to change the compiler settings before compiling
 
+    :::shell
     cd djbdns-1.05
     echo "cc -O2" > conf-cc
     echo "cc -s" > conf-ld
