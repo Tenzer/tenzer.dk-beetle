@@ -97,7 +97,7 @@ Then Nginx will strip the part of the URI specified in the `location` directive 
 
 **Changed behaviour**
 
-When we use a variable as the parameter for `proxy_pass` the behaviour show above with the trailing slash changes. Say we have this configuration:
+When we use a variable as the parameter for `proxy_pass` the behaviour shown above with the trailing slash changes. Say we have this configuration:
 
     :::nginx
     resolver 172.16.0.23;
