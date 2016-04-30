@@ -86,6 +86,12 @@ nav {
     margin: auto;
     max-width: $max-page-width;
     padding: 0 10px;
+
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
 }
 
 .posted-date {
