@@ -6,4 +6,6 @@ In order to build the site do the following:
 
 1. Create a Python virtual environment and switch to it.
 2. Install the required Python packages: `pip install -r requirements.txt`.
-3. Use the `beetle render` to render the site, optionally add `htmlmin` to the end in order to minify the resulting HTML files.
+3. Use `beetle render htmlmin sitemap` to render the site, minify the HTML and generate the sitemap.
+
+Tip: `beetle clean` can be used to clean out the the `output` folder.
